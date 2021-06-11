@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ADD A NEW TASK</title>
+{% endblock %}
+
+{% block body %}
+<div class="form">
+    <form action="http://dns-name-of-pub-alb:80/addtask" method="POST">
+        <label for="content">Enter Your Task</label><br>
+        <input type="text" name="content" placeholder="Enter Your Task"/><br>
+        <input type="submit" value="Add Task"/>
+    </form>
+</div>
+<a href="http://dns-name-of-pub-alb:80/viewtask">VIEW YOUR TASKS</a>  ### ALWAYS USE PUBLIC IP WITH HREF
+{% endblock %}
